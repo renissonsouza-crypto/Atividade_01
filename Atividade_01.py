@@ -2,15 +2,15 @@
 
 id_venda = input("Digite o ID da Venda: ")
 data = input("Digite a Data: ")
-vendedor = input("Digite o nome do Vendedor: ")
+vendedor = input("Diigikpoite o nome do Vendedor: ")
 cliente = input("Digite o nome do Cliente: ")
-produto = input("Digite o nome do Produto: ")
-categoria = input("Digite a Categoria: ")
+produto = input("Digitie o nome do Produto: ")
+categoria = input("Digiite a Categoria: ")
 
 quantidade = int(input("Digite a Quantidade: "))
 
 
-if quantidade > 100:
+if quantidade >= 100:
     print("\nNão temos essa quantidade em estoque!")
 else:
     preco_unitario = float(input("Digite o Preço Unitário: R$ "))
@@ -19,7 +19,7 @@ else:
     valor_total = quantidade * preco_unitario
 
     # Forma de pagamento
-    pagamento = input("Forma de pagamento (À Vista ou A Prazo): ")
+    pagamento = input("Forma de pagamento ( À Vista -5% ou A Prazo +5% ): ")
 
     if pagamento == "à vista" or pagamento == "avista" or pagamento == "a vista":
         valor_total = valor_total * 0.95  
@@ -30,7 +30,6 @@ else:
 
     print("\n" + "=" * 40)
     print("         DADOS DA VENDA")
-    print("=" * 40)
     print(f"ID da Venda: {id_venda}")
     print(f"Data: {data}")
     print(f"Vendedor: {vendedor}")
